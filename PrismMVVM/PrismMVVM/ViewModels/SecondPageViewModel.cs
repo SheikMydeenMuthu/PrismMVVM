@@ -11,7 +11,8 @@ namespace PrismMVVM.ViewModels
     {
         public SecondPageViewModel(INavigationService navigationService):base(navigationService)
         {
-
+            Title = "Second Page";
+            
         }
     }
 }
