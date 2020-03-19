@@ -23,7 +23,8 @@ namespace PrismMVVM
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/LoginPage");
+            //await NavigationService.NavigateAsync("NavigationPage/LoginPage");
+            await NavigationService.NavigateAsync("NavigationPage/SecondPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

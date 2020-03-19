@@ -5,39 +5,38 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="PrismMVVM.Views.SecondPage"
              Title="{Binding Title}">
-    <Frame HorizontalOptions="CenterAndExpand" 
-          VerticalOptions="CenterAndExpand"
-          IsClippedToBounds="True"
-           BorderColor="LightGray">
-        
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
+    <StackLayout HorizontalOptions="CenterAndExpand" 
+          VerticalOptions="CenterAndExpand">
 
-            <Entry Text="{Binding UserName}" 
-               Placeholder="Enter user name"
-               Grid.ColumnSpan="2"/>
+        <Label Text="Rotate Text"
+               FontSize="40"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               BindingContext="{x:Reference slider1}"
+               Rotation="{Binding Value}"/>
+        <Slider x:Name="slider1"               
+                Maximum="360"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
 
-            <Entry Text="{Binding Password}" 
-               Placeholder="Enter password"               
-               Grid.ColumnSpan="2"
-               Grid.Row="1"/>
+        <StackLayout HorizontalOptions="CenterAndExpand" 
+          VerticalOptions="CenterAndExpand">
 
-            <Button Text="Login"                
-                Grid.Row="2"/>
-
-            <Button Text="Register" 
-                Grid.Column="1"
-                Grid.Row="2"
-                HorizontalOptions="End"/>
+            <Label Text="{Binding Value}"
+               FontSize="40"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               BindingContext="{x:Reference slider2}"/>
             
-        </Grid>
-    </Frame>
+            <Image Source="ic_launcher.png"
+                   BindingContext="{x:Reference slider2}"
+                   Rotation="{Binding Value}"/>
+            
+        </StackLayout>
+        <Slider x:Name="slider2"               
+                Maximum="360"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                MaximumTrackColor="Beige"/>
+        </StackLayout>
 </ContentPage>
