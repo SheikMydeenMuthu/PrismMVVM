@@ -7,8 +7,7 @@ namespace PrismMVVM.Views
     {
         public SecondPage()
         {
-            InitializeComponent();
-            ViewModelLocator.
+            InitializeComponent();            
         }
     }
 }
