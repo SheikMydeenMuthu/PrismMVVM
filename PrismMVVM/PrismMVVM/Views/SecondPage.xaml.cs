@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Prism.Mvvm;
+using Xamarin.Forms;
 
 namespace PrismMVVM.Views
 {
@@ -7,6 +8,7 @@ namespace PrismMVVM.Views
         public SecondPage()
         {
             InitializeComponent();
+            ViewModelLocator.
         }
     }
 }

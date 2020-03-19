@@ -1,5 +1,6 @@
 ﻿using Prism;
 using Prism.Ioc;
+using Prism.Mvvm;
 using PrismMVVM.ViewModels;
 using PrismMVVM.Views;
 using Xamarin.Forms;
@@ -24,15 +25,15 @@ namespace PrismMVVM
             InitializeComponent();
 
             //await NavigationService.NavigateAsync("NavigationPage/LoginPage");
-            await NavigationService.NavigateAsync("NavigationPage/SecondPage");
+            await NavigationService.NavigateAsync("NavigationPage/MasterDetailsPage");
         }
-
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<SecondPage, SecondPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<MasterDetailsPage, MasterDetailsPageViewModel>();
         }
     }
 }
